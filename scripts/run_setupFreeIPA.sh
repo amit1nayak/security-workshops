@@ -19,15 +19,6 @@ eth=eth0
 #################################################
 
 #turn off firewall
-if grep -q -i "release 7" /etc/redhat-release
-then
-	systemctl stop firewalld
-	systemctl disable firewalld
-else
-	service iptables save
-	service iptables stop
-	chkconfig iptables off		
-fi
 
 
 
